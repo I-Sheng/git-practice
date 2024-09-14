@@ -14,7 +14,21 @@ Branches are used to create another line of development. By default, Git has a m
 
 ## Head
 HEAD is a pointer, which always points to the latest commit in the branch. Whenever you make a commit, HEAD is updated with the latest commit. The heads of the branches are stored in .git/refs/heads/ directory.
-### Experience
+# Experience
 * goal: check the difference with different commits
 1. check each head of commits
-![Change While in a New Branch](assets/change-while-in-new-branch.png)
+![Heads for commits](assets/heads-for-commits.png)
+2. difference between two git commits
+![Different between commits](assets/difference-between-commits.png)
+3. Log change while commit in a new branch
+![Change in a new branch](assets/change-while-in-new-branch.png)
+4. File difference while switch bach to main branch
+![file difference between branchs](assets/file-difference-while-switch-branch.png)
+5. Delete branch
+![delete branch](assets/delete-branch.png)
+6. Log change during push command
+![log change during push command1](assets/log-change-during-push-command1.png)
+![log change during push command2](assets/log-change-during-push-command2.png)
+7. Tree in git
+![tree in git](assets/tree-in-git.png)
+
