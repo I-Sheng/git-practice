@@ -24,11 +24,15 @@ HEAD is a pointer, which always points to the latest commit in the branch. Whene
 ![Change in a new branch](assets/change-while-in-new-branch.png)
 4. File difference while switch bach to main branch
 ![file difference between branchs](assets/file-difference-while-switch-branch.png)
+    * Learing: while switch to another branch the file committed in the origin branch will not appear if the new branch is not based on the origin branch.
 5. Delete branch
 ![delete branch](assets/delete-branch.png)
+    * Compare with git branch -d (Use "git branch -h" to get more info )
 6. Log change during push command
 ![log change during push command1](assets/log-change-during-push-command1.png)
 ![log change during push command2](assets/log-change-during-push-command2.png)
+    * The remote change after push command
 7. Tree in git
 ![tree in git](assets/tree-in-git.png)
+    * The tree contains bolbs which is a content-addressed hash
 
