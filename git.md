@@ -14,3 +14,7 @@ Branches are used to create another line of development. By default, Git has a m
 
 ## Head
 HEAD is a pointer, which always points to the latest commit in the branch. Whenever you make a commit, HEAD is updated with the latest commit. The heads of the branches are stored in .git/refs/heads/ directory.
+### Experience
+* goal: check the difference with different commits
+1. check each head of commits
+
