@@ -17,4 +17,4 @@ HEAD is a pointer, which always points to the latest commit in the branch. Whene
 ### Experience
 * goal: check the difference with different commits
 1. check each head of commits
-
+![Change While in a New Branch](assets/change while in a new branch.png)
