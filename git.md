@@ -1,10 +1,18 @@
 # Key concepts in git
-* The description refers to [this site](https://www.tutorialspoint.com/git/git_basic_concepts.htm)
+* Git是一個按內容定位的檔案系統其中包含四種類型的物件(blob, tree, commit, tag)
 ## Blobs
-Blob stands for Binary Large Object. Each version of a file is represented by blob. A blob holds the file data but doesn’t contain any metadata about the file. It is a binary file, and in Git database, it is named as SHA1 hash of that file. In Git, files are not addressed by names. Everything is content-addressed.
+Blob(Binary Large Object)是根據檔案(jpg, pdf, png...)，或是文件的內容(與檔名無關)所計算出來的SHA1 hash值，在git中做為物件存在，其在.git中位置為.git/objects。
+```bash
+# Can use git hash-object to find the SHA1 hash value, example as follows:
+cat readme.md | git hash-object -w --stdin
+```
+
+
 
 ## Trees
-Tree is an object, which represents a directory. It holds blobs as well as other sub-directories. A tree is a binary file that stores references to blobs and trees which are also named as SHA1 hash of the tree object.
+Tree是git中的一種物件，代表檔案的目錄。他的內容包含目錄底下的檔案模式(file mode)、檔案類別(type)，檔案SHA1 hash值、檔案名稱。
+* tree內容範例如下:
+![tree-content](assets/tree-content.png)
 
 ## Commits
 Commit holds the current state of the repository. A commit is also named by SHA1 hash. You can consider a commit object as a node of the linked list. Every commit object has a pointer to the parent commit object. From a given commit, you can traverse back by looking at the parent pointer to view the history of the commit. If a commit has multiple parent commits, then that particular commit has been created by merging two branches.
@@ -36,3 +44,7 @@ HEAD is a pointer, which always points to the latest commit in the branch. Whene
 ![tree in git](assets/tree-in-git.png)
     * The tree contains bolbs which is a content-addressed hash
 
+
+## 參考資料
+1. [Git basic concepts](https://www.tutorialspoint.com/git/git_basic_concepts.htm)
+2. [深入 Git：Git 物件儲存 - blob 物件](https://titangene.github.io/article/git--blob-object.html)
