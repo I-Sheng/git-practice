@@ -1,5 +1,5 @@
-1. 安裝的 nodejs 版本
-2. 為什麼選擇這個 nodejs版本
+1. 安裝的 nodejs 版本: v20.17.0
+2. 選擇原因: 我們小組的人都使用過node.js因此決定使用它，另外v20.17.0是我們成員中node.js比較新的版本，因此選擇這個版本。
 3. nvm 與 npm 分別是什麼
     * npm(Node Package Manager)是Node.js預設的套件管理工具。幫助使用者解決套件相依性的問題。
     * nvm(Node Version Manager)是Node.js的版本管理工具。可以幫助Node.js在不同版本之間切換，幫助使用者在不同專案之間協作(使用不同的Node.js)版本。
