@@ -18,4 +18,4 @@ Now using node v12.22.6 (npm v6.14.5)
 $ node -v
 v12.22.6
 ```
-[nvm使用範例](../assets/nvm-example.png)
+![nvm使用範例](../assets/nvm-example.png)
