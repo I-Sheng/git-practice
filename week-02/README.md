@@ -7,9 +7,9 @@
     * npm(Node Package Manager)是Node.js預設的套件管理工具。幫助使用者解決套件相依性的問題。
     * nvm(Node Version Manager)是Node.js的版本管理工具。可以幫助Node.js在不同版本之間切換，幫助使用者在不同專案之間協作(使用不同的Node.js)版本。
 ### Coding
-- [ x ] fib
-- [ x ] sum
-- [ x ] Stack
+- [x] fib
+- [x] sum
+- [x] Stack
 #### nvm使用方式
 ```bash
 $ nvm use 16

@@ -1,4 +1,7 @@
 # git-practice
+## 課程資訊
+* [雲端原生系統開發與維運](https://lightda-tw.notion.site/nccu-2024-6197fc837f904789b3324ef0edf8c8d0)
+* [Git HW](https://lightda-tw.notion.site/20240912-W01-1-3e6313f8703846fd99d59d78aff03d27)
 ## 9/12課程心得
 根據老師的介紹，這會是一個實作導向的課程，成果將會上線到AWS，如果可以順利完成這堂課程，我將會得到第一個上線的網站，我很期待
 ## 課程期許
