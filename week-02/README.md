@@ -8,8 +8,13 @@
     * nvm(Node Version Manager)是Node.js的版本管理工具。可以幫助Node.js在不同版本之間切換，幫助使用者在不同專案之間協作(使用不同的Node.js)版本。
 ### Coding
 - [x] fib
+    * recursive\_fib & iterative\_fib
 - [x] sum
+    * Two array methods forEach > reduce
+    * (optional) require (1 + 2 + 3 + … + n) with input n -> recursive
 - [x] Stack
+    * With max\_size protection
+
 #### nvm使用方式
 ```bash
 $ nvm use 16
