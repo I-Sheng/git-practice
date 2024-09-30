@@ -25,7 +25,7 @@ npm run test
 const port = process.env.PORT || 3000;
 ```
 2. 設定環境變數
-```package.json
+```bash
 export PORT=4000
 ```
 3. 重新啟動app.js
@@ -70,9 +70,9 @@ node app.js
 | **Compile-Time Resolution**       | No (Dynamic and runtime evaluation) | Yes (Imports are resolved at compile time) |
 
 ### 主要區別
-1. CJS synchronous vs. ESM asynchronous 
+1. CJS synchronous vs. ESM asynchronous
     * 在瀏覽器中ESM在import時可以做別的事，例如網頁中載入圖片、文字等資源，而CJS則必須等待
-2. CJS dynamic import vs. ESM static import 
+2. CJS dynamic import vs. ESM static import
     * CJS 是在 runtime 運行，而 ESM 則大多用於 static import 代表可以在compile time 載入，節省 runtime 運行時間
 ## localhost
 * localhost 是當自己的電腦在當 server 時， client 端輸入的 address name
