@@ -26,4 +26,5 @@
     3. [The NGINX Crash Course](https://www.youtube.com/watch?v=7VAI73roXaY&t=2641s)
     4. [Amazon EC2 Basics & Instances Tutorial](https://www.youtube.com/watch?v=iHX-jtKIVNA)
     5. [View status checks for Amazon EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_status.html)
+    6. [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 12. (optional) 如果你很初學，不放心自己的過程是否正確，可以紀錄過程，我會盡量幫忙看
