@@ -1,4 +1,4 @@
-1. Project public IP: 54.252.69.107
+1. Project public IP: 13.239.36.169
 2. 什麼是 instance type?
     * Instance type 決定了 instance 的 CPU, memory, storage 等設定
 3. 什麼是 Nginx？有哪些用途與特性？
