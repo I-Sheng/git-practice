@@ -19,7 +19,7 @@
     * 使用 sudo 可以在暫時切換至 root 權限，有時候需要較高權限時使用，一般不用
 9. Nginx 的 Log 檔案在哪裡？你怎麼找到的？怎麼看 Nginx 的 Log？
 10. 其他你在過程中遭遇的問題，有找到解答就記錄下來，沒有可以把問題放著，下次上課討論。如果沒有遇到任何問題，也可以回答「無」
-    * ssh -i firstKey.pem ubuntu@54.252.69.107 同樣指令，在我 `exit` 一次後就無法登入，尋找問題中。
+    * 當我完成 nginx.conf 的更新後就變成 502 bad gateway 了! 修復 bug 中...
 11. 列出完成本作業時參考的資料
     1. [Fix for SSH Permission Denied (Public Key)](https://www.youtube.com/watch?v=A9CSSbten_s&t=7s)
     2. [Connect to AWS EC2 instance | SSH from Windows | .PEM Key](https://www.youtube.com/watch?v=jIxkbXB6-38&t=469s)
