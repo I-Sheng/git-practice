@@ -1,3 +1,7 @@
+# 作業描述
+[個人作業 5](https://lightda-tw.notion.site/20241017-W05-5-1222ceabc70c804caceec6e5156ddd36)
+
+# 作業回答
 1. 網址: [www.isheng.xyz](https://www.isheng.xyz)
 2. godaddy 購買網域
 3. DNS 的 **A record**（Address Record）是 DNS 中的記錄類型，用於將網域解析為對應的IPv4位址
@@ -11,3 +15,8 @@
     1. **加密資料傳輸：**HTTP 是不加密的協議，所有的數據在網路上傳輸時都以明文形式進行，這意味著任何人在傳輸過程中攔截這些數據都可以輕易讀取。HTTPS 則通過加密連線來保護資料，保障用戶的資料。
     2. **身份驗證：**SSL/TLS 憑證還可以用來驗證網站的真實性，保證用戶訪問的網站是合法的，而不是一個試圖進行釣魚攻擊或其他惡意行為的偽造網站。
     3. **符合現代網路標準：**許多現代網路功能（如 HTTP/2 和最新的瀏覽器 API）要求網站使用 HTTPS 才能啟用，這些功能可以提高網站的性能和安全性。
+
+
+# Reference
+1. 將憑證安裝至 AWS EC2 instance 的 Nginx 裡
+    * [Installing SSL Certificate on NGINX](https://help.zerossl.com/hc/en-us/articles/360058295894-Installing-SSL-Certificate-on-NGINX)
