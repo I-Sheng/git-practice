@@ -17,6 +17,11 @@
     3. **符合現代網路標準：**許多現代網路功能（如 HTTP/2 和最新的瀏覽器 API）要求網站使用 HTTPS 才能啟用，這些功能可以提高網站的性能和安全性。
 
 
+# Use sites
+1. [godaddy](https://dashboard.godaddy.com/venture?ventureId=75604efb-5eb4-4a44-82ca-e2ba446da452&itc=vh_ventureredirect)
+
+
 # Reference
 1. 將憑證安裝至 AWS EC2 instance 的 Nginx 裡
     * [Installing SSL Certificate on NGINX](https://help.zerossl.com/hc/en-us/articles/360058295894-Installing-SSL-Certificate-on-NGINX)
+2. [What is Domain Name, URL, Web Page, Website, WWW, Web Hosting](https://www.youtube.com/watch?v=sh7fe05mUfA)
