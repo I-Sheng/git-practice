@@ -16,6 +16,9 @@
     2. **身份驗證：**SSL/TLS 憑證還可以用來驗證網站的真實性，保證用戶訪問的網站是合法的，而不是一個試圖進行釣魚攻擊或其他惡意行為的偽造網站。
     3. **符合現代網路標準：**許多現代網路功能（如 HTTP/2 和最新的瀏覽器 API）要求網站使用 HTTPS 才能啟用，這些功能可以提高網站的性能和安全性。
 
+## 備註
+* 已完成 backend 中 SSL 設定
+* 網域: www.isheng.xyz 目前掛載 Cloudways 網站進行測試， SSL 設定失敗，嘗試修復中。
 
 # Use sites
 1. [godaddy](https://dashboard.godaddy.com/venture?ventureId=75604efb-5eb4-4a44-82ca-e2ba446da452&itc=vh_ventureredirect)
