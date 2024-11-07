@@ -25,3 +25,41 @@
 1. 將憑證安裝至 AWS EC2 instance 的 Nginx 裡
     * [Installing SSL Certificate on NGINX](https://help.zerossl.com/hc/en-us/articles/360058295894-Installing-SSL-Certificate-on-NGINX)
 2. [What is Domain Name, URL, Web Page, Website, WWW, Web Hosting](https://www.youtube.com/watch?v=sh7fe05mUfA)
+### nginx.conf
+```nginx.conf
+http{
+
+    include mime.types;
+
+
+    upstream backendserver{
+        server 127.0.0.1:1111;
+    }
+    server{
+
+        listen 80;
+        listen [::]:80;
+
+        server_name  isheng.xyz;
+        return 301 https://$host$request_uri;
+    }
+
+
+    server{
+        listen 443 ssl; # Enalbe SSL here
+        ssl_certificate /etc/ssl/isheng.xyz/certificate.crt;
+        ssl_certificate_key /etc/ssl/isheng.xyz/private.key;
+        server_name  isheng.xyz;
+        access_log   /var/log/nginx/nginx.vhost.access.log;
+        error_log    /var/log/nginx/nginx.vhost.error.log;
+
+        location / {
+            proxy_pass http://backendserver/;
+        }
+    }
+
+}
+
+
+events{}
+```
