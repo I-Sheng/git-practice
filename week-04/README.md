@@ -1,7 +1,7 @@
 # 功課要求
 [個人作業4](https://lightda-tw.notion.site/20241002-W04-4-1132ceabc70c8048bbd2d228ad660156)
 # 功課內容
-1. Project public IP: [13.239.36.169](http://13.239.36.169)
+1. Project public IP: [54.250.246.193](http://54.250.246.193)
 2. 什麼是 instance type?
     * Instance type 決定了 instance 的 CPU, memory, storage 等設定
 3. 什麼是 Nginx？有哪些用途與特性？
