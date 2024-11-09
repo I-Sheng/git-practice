@@ -28,11 +28,11 @@
 - **Action**: Corrected the error in `nginx.conf`.
 - **Outcome**: Successfully reloaded the nginx service.
 
+<img width="856" alt="螢幕擷取畫面 2024-11-09 230443" src="https://github.com/user-attachments/assets/0dcd8982-1eda-4871-9fa9-fe3d92a8ec1c">
+
 ### Step 7: Testing Connection Again with `curl`
 - **Command**: `curl localhost`
-- **Observation**: Received a "403 Forbidden" error, indicating an authorization issue.
-
-<img width="856" alt="螢幕擷取畫面 2024-11-09 230443" src="https://github.com/user-attachments/assets/0dcd8982-1eda-4871-9fa9-fe3d92a8ec1c">
+- **Observation**: Still the client could not connect to the server, indicating a potential issue with the web server configuration, try to inspect the traffic through `iptables`
 
 ### Step 8: Inspecting Traffic Rules with iptables
 - **Command**: `iptables -L`
@@ -40,6 +40,8 @@
 - **Action**: Deleted the `REJECT` rule to allow traffic on port 80.
 
 <img width="857" alt="螢幕擷取畫面 2024-11-09 230548" src="https://github.com/user-attachments/assets/cb55d158-305d-4bdd-ae5d-42b7cae5e095">
+<img width="853" alt="螢幕擷取畫面 2024-11-09 230609" src="https://github.com/user-attachments/assets/14a510f5-adc3-4497-8e9e-9afa39072b26">
+
 
 ### Step 9: Re-checking Connection Authorization
 - **Observation**: The "403 Forbidden" error persisted.
