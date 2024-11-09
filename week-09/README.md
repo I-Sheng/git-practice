@@ -40,20 +40,18 @@
 - **Action**: Deleted the `REJECT` rule to allow traffic on port 80.
 
 <img width="857" alt="螢幕擷取畫面 2024-11-09 230548" src="https://github.com/user-attachments/assets/cb55d158-305d-4bdd-ae5d-42b7cae5e095">
-<img width="853" alt="螢幕擷取畫面 2024-11-09 230609" src="https://github.com/user-attachments/assets/14a510f5-adc3-4497-8e9e-9afa39072b26">
-
 
 ### Step 9: Re-checking Connection Authorization
 - **Observation**: The "403 Forbidden" error persisted.
 - **Action**: Located the website files in `/var/myweb` and used `chmod` to update file permissions to ensure the server had proper access.
 
-### Step 10: Final Verification
-- **Command**: `curl localhost`
-- **Outcome**: The connection was successful, confirming that the issues were resolved.
-
 <img width="853" alt="螢幕擷取畫面 2024-11-09 230609" src="https://github.com/user-attachments/assets/72404534-e272-4db8-8b0f-4e6a4d2f1dfe">
 <img width="420" alt="螢幕擷取畫面 2024-11-09 230640" src="https://github.com/user-attachments/assets/b17b4547-9670-4cc9-8368-635922c030cb">
 <img width="436" alt="螢幕擷取畫面 2024-11-09 230902" src="https://github.com/user-attachments/assets/2fe6febe-4e07-4aae-a287-b9533bcf39a1">
+
+### Step 10: Final Verification
+- **Command**: `curl localhost`
+- **Outcome**: The connection was successful, confirming that the issues were resolved.
 <img width="569" alt="螢幕擷取畫面 2024-11-09 230940" src="https://github.com/user-attachments/assets/08d00b8c-be4f-415d-9e19-d4aec6e1de58">
 
 ## Intermediate Steps: Ensuring Persistence After Reboot
