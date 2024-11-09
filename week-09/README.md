@@ -61,10 +61,12 @@
 ### Problem: Connectivity Issue Reoccurs After Reboot
 <img width="815" alt="螢幕擷取畫面 2024-11-09 231102" src="https://github.com/user-attachments/assets/ca54e585-ad6a-4a56-a2d3-54276c03bc6d">
 <img width="798" alt="螢幕擷取畫面 2024-11-09 231120" src="https://github.com/user-attachments/assets/7577cdcf-30ff-451c-91ca-6551fee3bf48">
+
 1. **Inspecting iptables Rules**:
    - Located the iptables configuration in `/etc/iptables` and manually edited rules to persist desired settings across reboots.
 
 <img width="852" alt="螢幕擷取畫面 2024-11-09 231211" src="https://github.com/user-attachments/assets/4cff0b32-fbac-4bee-be06-71ba85f7cd64">
+
 2. **Managing Services**:
    - Disabled the fake server service to prevent it from occupying port 80.
    - Enabled nginx to ensure it starts on reboot.
