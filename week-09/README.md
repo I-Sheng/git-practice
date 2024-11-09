@@ -1,41 +1,60 @@
-# Lab step and results
-## Basic
-1. Use `curl` to check localhost connection
-    * Appear a fake web server, which is not expected. Therefore execute step2
-2. Use `lsof` to check who is using port http protocol(port 80)
-3. After figure out there is a process occupying port 80, kill it manually.
+# Lab Report: Troubleshooting Web Server Connectivity and Configuration Issues
 
-[[]]
+## Basic Steps
 
-4. Use `curl` again and find that the client couldn't connect to server
-    * According to the informed knowledge, I reasonably suspect that something when wrong on the nginx, so go check nginx service.
-5. Try to reload the `nginx.conf`, found that there is an error
-[[]]
+### Step 1: Checking Localhost Connection
+- **Command**: `curl localhost`
+- **Observation**: Unexpectedly, a fake web server responded. This was not the expected outcome, indicating that another process may be occupying port 80.
 
-6. Fix the error in `nginx.conf`
-7. Start and reload nginx service successfully
-    * However, the fail connection still exist while try to `curl`
-[[]]
-8. Assume that something went wrong with the traffic, use iptables to checkt the traffic for IPV4 & IPV6
-    * There is a REJECT for tcp protocol for port 80, delete it
-9. Use `curl` again, find there is a 403 Forbidden
- * There is an error in authorization, check where is the file for the webpage
+### Step 2: Identifying Processes Using HTTP Protocol (Port 80)
+- **Command**: `lsof -i :80`
+- **Outcome**: Found a process occupying port 80, potentially causing conflicts with the expected web server.
 
-[[]]
-10. File is in `/var/myweb`, use `chmod` to change the authorization, then everything fixed.
-[[]]
+### Step 3: Killing the Occupying Process
+- **Action**: Terminated the identified process to free up port 80 for the intended server.
 
-## Intermidiate
-* The problem still exist after rebooting
-1. Find the rules for iptables where `etc/iptables`, and change the rules manually
-[[]]
-2. Disable the service for fake server and enable nginx service
-[[]]
+### Step 4: Re-testing with `curl`
+- **Command**: `curl localhost`
+- **Observation**: The client could not connect to the server, indicating a potential issue with the web server configuration.
 
-## Advance
-* There is a challege to find the huge dummy file and delete it to release the disk space.
-* Use the command below to find the target
-```bash
-sudo du -h --max-depth=1
-```
-* Finish the work, well done!
+### Step 5: Checking and Reloading Nginx Configuration
+- **Action**: Attempted to reload `nginx.conf`.
+- **Outcome**: Encountered an error in the `nginx.conf` file, preventing successful configuration.
+
+### Step 6: Fixing the `nginx.conf` File
+- **Action**: Corrected the error in `nginx.conf`.
+- **Outcome**: Successfully reloaded the nginx service.
+
+### Step 7: Testing Connection Again with `curl`
+- **Command**: `curl localhost`
+- **Observation**: Received a "403 Forbidden" error, indicating an authorization issue.
+
+### Step 8: Inspecting Traffic Rules with iptables
+- **Command**: `iptables -L`
+- **Outcome**: Discovered a `REJECT` rule for the TCP protocol on port 80. This rule was likely blocking access to the server.
+- **Action**: Deleted the `REJECT` rule to allow traffic on port 80.
+
+### Step 9: Re-checking Connection Authorization
+- **Observation**: The "403 Forbidden" error persisted.
+- **Action**: Located the website files in `/var/myweb` and used `chmod` to update file permissions to ensure the server had proper access.
+
+### Step 10: Final Verification
+- **Command**: `curl localhost`
+- **Outcome**: The connection was successful, confirming that the issues were resolved.
+
+## Intermediate Steps: Ensuring Persistence After Reboot
+
+### Problem: Connectivity Issue Reoccurs After Reboot
+1. **Inspecting iptables Rules**:
+   - Located the iptables configuration in `/etc/iptables` and manually edited rules to persist desired settings across reboots.
+
+2. **Managing Services**:
+   - Disabled the fake server service to prevent it from occupying port 80.
+   - Enabled nginx to ensure it starts on reboot.
+
+## Advanced Steps: Releasing Disk Space by Deleting Dummy Files
+
+- **Challenge**: Locate and delete large, unnecessary files to free up disk space.
+- **Command**:
+  ```bash
+  sudo du -h --max-depth=1
