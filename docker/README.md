@@ -79,6 +79,13 @@ docker container run -d ubuntu
 ![fig6](https://github.com/user-attachments/assets/f6b151fd-ea17-4ae6-9576-f2c5afbee11d)
 
 ##### 你觀察到什麼？container 有被成功啟動嗎？為什麼?
+* `ubuntu` that don’t have a long-running process specified
+```bash
+# Solution
+docker container run -it --name ubuntu1 ubuntu /bin/bash
+```
+###### Start the container again
+
 
 
 
