@@ -77,10 +77,11 @@
 ```bash
 sudo du -h --max-depth=1
 # or
-sudo du -h / | sort -n -r | head -n 15
+sudo du -h / | sort -h -r | head -n 15
 ```
 * du -h, --human-readable
-* sort -n, --numberic-sort: compare human readable numbers (e.g., 2K 1G)
+* sort -h, --human-numberic-sort: compare human readable numbers (e.g., 2K 1G)
+* sort -n, --numberic-sort: compare according to string numerical value
 * sort -r, --reverse: reverse the result of comparisons
 
 <img width="530" alt="螢幕擷取畫面 2024-11-09 231242" src="https://github.com/user-attachments/assets/91bc5282-4fc9-456d-8520-cb2c30836a7a">
