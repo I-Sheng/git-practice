@@ -103,6 +103,27 @@ docker container run -it --rm -e DB_HOST=1.2.3.4 -e DB_USERNAME=tester -e DB_PAS
 ```
 ![fig8](https://github.com/user-attachments/assets/63a4b5ab-8d06-423e-9f0e-201ab07f00bc)
 
+## Docker Image
+### image 的列表與刪除
+#### 基礎建立及刪除
+```bash
+# 列出 image
+docker image ls
+## 舊版指令 docker images
+# 刪除 image
+docker image rm [image name]
+## 舊版指令 docker rmi
+```
 
+#### image tag
+* image name: 完整的格式為 `Host:PortNumber:namespace/repository:tag`
+```bash
+# docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+docker image tag nginx mytest
+docker image tag nginx nginx:v1234
+## 觀察一下:
+docker image ls
+## 應該會發現，雖然 repository 或是 tag 不一樣，但 ID 是一樣的
+```
 
-
+* docker image tag: Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
