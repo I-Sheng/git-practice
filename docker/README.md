@@ -93,6 +93,15 @@ docker container start -ai ubuntu
 
 ![fig7](https://github.com/user-attachments/assets/d6ac124a-45dd-4165-87a3-1f217a216dc7)
 
+### 環境變數
+#### 透過參數 -e 在啟動 container 時，注入環境變數
+```bash
+docker container run -it --rm -e DB_HOST=1.2.3.4 -e DB_USERNAME=tester -e DB_PASSWORD=1234 alpine
+
+# env 可以印出目前有哪些環境變數，觀察看看是否有 DB_HOST, DB_USERNAME 跟 DB_PASSWORD
+> env
+```
+
 
 
 
