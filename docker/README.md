@@ -86,6 +86,7 @@ docker container run -it --name ubuntu1 ubuntu /bin/bash
 ```
 ###### Start the container again
 
+![fig7](https://github.com/user-attachments/assets/d6ac124a-45dd-4165-87a3-1f217a216dc7)
 
 
 
