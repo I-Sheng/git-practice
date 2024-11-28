@@ -47,6 +47,7 @@ docker container run -it nginx bash
 * -t tty 讓 Docker 分配一個虛擬終端機(pseudo-TTY)，並且綁定到容器的標準輸出上。
 * 此時會建立一個虛擬終端機，並且啟動互動模式，也就是你現在「在 container 裡」
 * 離開的話，使用指令 `exit`
+![fig2](https://github.com/user-attachments/assets/a9b4465e-1dc1-4d8e-a2af-0a9aae91f2be)
 
 #### Detach mode (背景執行模式)
 ```bash
@@ -55,6 +56,7 @@ docker container run -d nginx
 docker container ls
 ```
 * -d: Run in detach mode
+![fig3](https://github.com/user-attachments/assets/dc0111d2-8698-481b-8402-d5a31f871ad3)
 
 #### detach 模式看不到程式輸出的結果？
 ##### 觀察 container 裡 processes 的 stdout 與 stderr
