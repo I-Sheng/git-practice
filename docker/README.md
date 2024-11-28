@@ -101,6 +101,7 @@ docker container run -it --rm -e DB_HOST=1.2.3.4 -e DB_USERNAME=tester -e DB_PAS
 # env 可以印出目前有哪些環境變數，觀察看看是否有 DB_HOST, DB_USERNAME 跟 DB_PASSWORD
 > env
 ```
+![fig8](https://github.com/user-attachments/assets/63a4b5ab-8d06-423e-9f0e-201ab07f00bc)
 
 
 
