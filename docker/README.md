@@ -114,6 +114,7 @@ docker image ls
 docker image rm [image name]
 ## 舊版指令 docker rmi
 ```
+![fig9](https://github.com/user-attachments/assets/0a3ec505-7151-4a84-b136-6ad3e7bae7dc)
 
 #### image tag
 * image name: 完整的格式為 `Host:PortNumber:namespace/repository:tag`
@@ -121,9 +122,10 @@ docker image rm [image name]
 # docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 docker image tag nginx mytest
 docker image tag nginx nginx:v1234
-## 觀察一下:
+## Observation:
 docker image ls
-## 應該會發現，雖然 repository 或是 tag 不一樣，但 ID 是一樣的
+## Although repository or tag is not the same， ID is the same
 ```
+![fig10](https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429)
 
 * docker image tag: Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
