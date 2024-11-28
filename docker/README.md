@@ -85,6 +85,11 @@ docker container run -d ubuntu
 docker container run -it --name ubuntu1 ubuntu /bin/bash
 ```
 ###### Start the container again
+```bash
+docker container start -ai ubuntu
+```
+* -a, --attach :Attach STDOUT/STDERR and forward signals
+* -i, --interactive :Attach container's STDIN
 
 ![fig7](https://github.com/user-attachments/assets/d6ac124a-45dd-4165-87a3-1f217a216dc7)
 
