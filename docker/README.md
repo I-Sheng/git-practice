@@ -56,6 +56,23 @@ docker container ls
 ```
 * -d: Run in detach mode
 
+#### detach 模式看不到程式輸出的結果？
+##### 觀察 container 裡 processes 的 stdout 與 stderr
+```bash
+docker container logs {container id or name}
+```
+##### 「進入」這個 container
+```bash
+docker container exec -it {container id or name} bash
+```
+
+#### 實驗
+##### ubuntu 這個 image 如果用 detach 模式啟動會怎麼樣？
+```bash
+docker container run -d ubuntu
+```
+##### 你觀察到什麼？container 有被成功啟動嗎？為什麼?
+
 
 
 
