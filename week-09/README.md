@@ -74,8 +74,14 @@
 
 - **Challenge**: Locate and delete large, unnecessary files to free up disk space.
 - **Command**:
-  ```bash
-  sudo du -h --max-depth=1
-  
+```bash
+sudo du -h --max-depth=1
+# or
+sudo du -h / | sort -n -r | head -n 15
+```
+* du -h, --human-readable
+* sort -n, --numberic-sort: compare human readable numbers (e.g., 2K 1G)
+* sort -r, --reverse: reverse the result of comparisons
+
 <img width="530" alt="螢幕擷取畫面 2024-11-09 231242" src="https://github.com/user-attachments/assets/91bc5282-4fc9-456d-8520-cb2c30836a7a">
 <img width="608" alt="螢幕擷取畫面 2024-11-09 231323" src="https://github.com/user-attachments/assets/fbd99bb6-f3f6-4b5f-a689-393bdfba48fb">
