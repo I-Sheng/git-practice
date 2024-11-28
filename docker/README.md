@@ -63,16 +63,21 @@ docker container ls
 ```bash
 docker container logs {container id or name}
 ```
+![fig4](https://github.com/user-attachments/assets/1e20c0e3-6d94-4cac-adf7-08ac17cc2eed)
+
 ##### 「進入」這個 container
 ```bash
 docker container exec -it {container id or name} bash
 ```
+![fig5](https://github.com/user-attachments/assets/f62f387f-1705-4198-bd7a-2f2f8b4aae87)
 
 #### 實驗
 ##### ubuntu 這個 image 如果用 detach 模式啟動會怎麼樣？
 ```bash
 docker container run -d ubuntu
 ```
+![fig6](https://github.com/user-attachments/assets/f6b151fd-ea17-4ae6-9576-f2c5afbee11d)
+
 ##### 你觀察到什麼？container 有被成功啟動嗎？為什麼?
 
 
