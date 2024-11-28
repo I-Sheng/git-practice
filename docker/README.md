@@ -10,6 +10,13 @@ docker container run --name {your name} alpine echo "hello world"
 * alpine: [image]
 * echo "hello world" 是啟動這個 container 的 process
     * In the host environment it is a normal process, but in container environment it is the process PID 1. Therefore, while "hello world" is printed, the container is closed.
+![螢幕擷取畫面 2024-11-28 204723](https://github.com/user-attachments/assets/3c6be8fa-5c4d-4acf-9695-a4e33c0b2136)
+
+#### Note
+```bash
+docker start -a alpine
+# -a: link the output to the host terminal
+```
 
 ### 練習基本指令
 ```bash
