@@ -129,3 +129,15 @@ docker image ls
 ![fig10](https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429)
 
 * docker image tag: Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+### image 與 container 的關係
+* 來自同個 image 的 container 互相獨立
+* 實驗: 在一個 container 新增檔案，不會出現在另一個 container
+```bash
+docker container run -it alpine ash
+> touch a.txt
+# Another terminal
+docker container run -it alpine ash
+> ls
+```
+
