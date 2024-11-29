@@ -167,5 +167,29 @@ docker image load -i alpine.tar
 <!--![fig14](https://github.com/user-attachments/assets/4bc71740-53c6-4d2c-a312-6d94ddfbf555)-->
 <img src="https://github.com/user-attachments/assets/4bc71740-53c6-4d2c-a312-6d94ddfbf555" alt="fig10" style="width:60%;" /><br>
 
+### pull image 的觀察 - image layers
+* 兩次執行的結果有何差異?
+```bash
+docker image rm nginx
+docker container run --rm nginx echo "hello world"
+docker container run --rm nginx echo "hello world"
+```
+* docker container run --rm: 是當這個 container stop 時，自動移除 (rm: remove)
 
 
+#### 小結
+* 第一次沒有 image 時，docker 會先 pull image (有多個 layers)
+* 第二次直接載入
+
+### 試著刪除 container 仍存在的 image
+```bash
+docker container run -dit --name lab alpine
+docker image rm alpine
+docker container stop lab
+docker image rm alpine
+docker container rm lab
+docker image rm apline
+```
+
+#### 小結
+* 仍有使用 Image 的 Container 時， Image 無法刪除
