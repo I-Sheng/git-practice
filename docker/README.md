@@ -150,19 +150,22 @@ docker container run -it alpine ash
 ```bash
 docker container commit {container hash id} {new image name}
 ```
-![fig12](https://github.com/user-attachments/assets/ce013f59-70e1-492c-89fa-2fb521be76f6)
+<!--![fig12](https://github.com/user-attachments/assets/ce013f59-70e1-492c-89fa-2fb521be76f6)-->
+<img src="https://github.com/user-attachments/assets/ce013f59-70e1-492c-89fa-2fb521be76f6" alt="fig12" style="width:80%;" />
 #### 觀察 image 的「歷史紀錄」
 ```bash
 docker image history {image id}
 ```
-![fig13](https://github.com/user-attachments/assets/042ea940-ee66-4495-bc00-0e2ed8a0c0bc)
+<!--![fig13](https://github.com/user-attachments/assets/042ea940-ee66-4495-bc00-0e2ed8a0c0bc)-->
+<img src="https://github.com/user-attachments/assets/042ea940-ee66-4495-bc00-0e2ed8a0c0bc" alt="fig10" style="width:80%;" />
 #### 把 image 存成檔案
 ```bash
 docker image save alpine -o alpine.tar
 docker image rm alpine
 docker image load -i alpine.tar
 ```
-![fig14](https://github.com/user-attachments/assets/4bc71740-53c6-4d2c-a312-6d94ddfbf555)
+<!--![fig14](https://github.com/user-attachments/assets/4bc71740-53c6-4d2c-a312-6d94ddfbf555)-->
+<img src="https://github.com/user-attachments/assets/4bc71740-53c6-4d2c-a312-6d94ddfbf555" alt="fig10" style="width:60%;" />
 
 
 
