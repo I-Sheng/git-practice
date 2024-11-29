@@ -63,7 +63,7 @@ docker container ls
 ```bash
 docker container logs {container id or name}
 ```
-![fig4](https://github.com/user-attachments/assets/1e20c0e3-6d94-4cac-adf7-08ac17cc2eed)
+![fig4](https://github.com/user-attachments/assets/1e20c0e3-6d94-4cac-adf7-08ac17cc2eed){100%}
 
 ##### 「進入」這個 container
 ```bash
