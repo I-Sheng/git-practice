@@ -194,3 +194,19 @@ docker image rm apline
 
 #### 小結
 * 仍有使用 Image 的 Container 時， Image 無法刪除
+
+## Docker Network
+* 基本有三種類型: none, bridge, host
+
+### mapping port number
+```bash
+docker container run -d -p 3000:80 {custom image name}
+docker container run -d -p 3001:80 {custom image name}
+
+# Test from host
+curl localhost:3000
+curl localhost:3001
+```
+
+#### 小結
+* -p [Host Port Number]:[Container Port Number]: 把 container port number map 到 host port number
