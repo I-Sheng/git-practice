@@ -175,6 +175,7 @@ docker container run --rm nginx echo "hello world"
 docker container run --rm nginx echo "hello world"
 ```
 * docker container run --rm: 是當這個 container stop 時，自動移除 (rm: remove)
+![fig15](https://github.com/user-attachments/assets/09df4d42-40fe-469e-a646-59d7a5133d47)
 
 
 #### 小結
@@ -190,6 +191,7 @@ docker image rm alpine
 docker container rm lab
 docker image rm apline
 ```
+![fig16](https://github.com/user-attachments/assets/95bdc82b-4bfc-4dfd-81c9-b3ccab09cc26)
 
 #### 小結
 * 仍有使用 Image 的 Container 時， Image 無法刪除
