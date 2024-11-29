@@ -114,7 +114,8 @@ docker image ls
 docker image rm [image name]
 ## 舊版指令 docker rmi
 ```
-![fig9](https://github.com/user-attachments/assets/0a3ec505-7151-4a84-b136-6ad3e7bae7dc)
+<!--![fig9](https://github.com/user-attachments/assets/0a3ec505-7151-4a84-b136-6ad3e7bae7dc)-->
+<img src="https://github.com/user-attachments/assets/0a3ec505-7151-4a84-b136-6ad3e7bae7dc" alt="fig9" style="width:800px;" />
 
 #### image tag
 * image name: 完整的格式為 `Host:PortNumber:namespace/repository:tag`
