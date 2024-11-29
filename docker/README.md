@@ -129,6 +129,7 @@ docker image ls
 ```
 
 <img src="https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429" alt="fig10" style="width:500px;" />
+<img src="https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429" alt="fig10" style="max-width: none; height: auto;" />
 
 
 * docker image tag: Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
