@@ -140,4 +140,5 @@ docker container run -it alpine ash
 docker container run -it alpine ash
 > ls
 ```
+![fig11](https://github.com/user-attachments/assets/f29ec8ca-f96f-49b1-8a41-7b44a73ace0e)
 
