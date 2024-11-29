@@ -114,7 +114,7 @@ docker image ls
 docker image rm [image name]
 ## 舊版指令 docker rmi
 ```
-![fig9](https://github.com/user-attachments/assets/0a3ec505-7151-4a84-b136-6ad3e7bae7dc)
+![fig9](https://github.com/user-attachments/assets/0a3ec505-7151-4a84-b136-6ad3e7bae7dc){100%}
 
 #### image tag
 * image name: 完整的格式為 `Host:PortNumber:namespace/repository:tag`
@@ -126,7 +126,7 @@ docker image tag nginx nginx:v1234
 docker image ls
 ## Although repository or tag is not the same， ID is the same
 ```
-![fig10](https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429)
+![fig10](https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429){100%}
 
 * docker image tag: Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
 
@@ -140,5 +140,5 @@ docker container run -it alpine ash
 docker container run -it alpine ash
 > ls
 ```
-![fig11](https://github.com/user-attachments/assets/f29ec8ca-f96f-49b1-8a41-7b44a73ace0e)
+![fig11](https://github.com/user-attachments/assets/f29ec8ca-f96f-49b1-8a41-7b44a73ace0e){100%}
 
