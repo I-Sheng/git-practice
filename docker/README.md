@@ -207,6 +207,7 @@ docker container run -d -p 3001:80 {custom image name}
 curl localhost:3000
 curl localhost:3001
 ```
+![fig17](https://github.com/user-attachments/assets/c45097e9-9993-45f2-bda9-3507d8cd7830)
 
 #### 小結
 * -p [Host Port Number]:[Container Port Number]: 把 container port number map 到 host port number
