@@ -129,7 +129,6 @@ docker image ls
 ```
 
 <img src="https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429" alt="fig10" style="width:500px;" />
-<img src="https://github.com/user-attachments/assets/806c1848-77d2-4e2e-abec-ed8db8b80429" alt="fig10" style="max-width: none; height: auto;" />
 
 
 * docker image tag: Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
@@ -146,3 +145,19 @@ docker container run -it alpine ash
 ```
 ![fig11](https://github.com/user-attachments/assets/f29ec8ca-f96f-49b1-8a41-7b44a73ace0e)
 
+### commit to image
+#### 把 container commit 回 image
+```bash
+docker container commit {container hash id} {new image name}
+```
+
+#### 把 image 存成檔案
+```bash
+docker image save alpine -o alpine.tar
+docker image rm alpine
+docker image load -i alpine.tar
+```
+####觀察 image 的「歷史紀錄」
+```bash
+docker image history {image id}
+```
