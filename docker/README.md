@@ -175,8 +175,7 @@ docker container run --rm nginx echo "hello world"
 docker container run --rm nginx echo "hello world"
 ```
 * docker container run --rm: 是當這個 container stop 時，自動移除 (rm: remove)
-![fig15](https://github.com/user-attachments/assets/09df4d42-40fe-469e-a646-59d7a5133d47)
-
+![fig15](https://github.com/user-attachments/assets/f22e89ab-f3e9-4c7a-bc62-ac3f9070d133)
 
 #### 小結
 * 第一次沒有 image 時，docker 會先 pull image (有多個 layers)
