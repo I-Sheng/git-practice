@@ -218,14 +218,16 @@ curl localhost:3001
 ```bash
 ip addr
 ```
-![fig18](https://github.com/user-attachments/assets/b01029a6-492d-4262-80ee-53b646f331a1)
+<!--![fig18](https://github.com/user-attachments/assets/b01029a6-492d-4262-80ee-53b646f331a1)-->
+<img src="https://github.com/user-attachments/assets/b01029a6-492d-4262-80ee-53b646f331a1" alt="fig18" style="width:70%;" /><br>
 
 #### 列出目前的 docker network
 ```bash
 docker network list
 docker network inspect bridge
 ```
-![fig19](https://github.com/user-attachments/assets/80f65cc6-1d65-49c1-a8d3-5131843853d5)
+<img src="https://github.com/user-attachments/assets/80f65cc6-1d65-49c1-a8d3-5131843853d5" alt="fig19" style="width:50%;" /><br>
+<!--![fig19](https://github.com/user-attachments/assets/80f65cc6-1d65-49c1-a8d3-5131843853d5)-->
 
 #### 開啟兩個 Container 後觀察 Host 與 Containers 中的網路變化
 ```bash
@@ -240,8 +242,10 @@ docker container exec -it alpine1 ash
 # ping another container to check the connection in the network
 > ping 172.17.0.3
 ```
-![fig20](https://github.com/user-attachments/assets/d2fb3821-4133-4a32-96c9-344c19c9149d)
+<!--![fig20](https://github.com/user-attachments/assets/d2fb3821-4133-4a32-96c9-344c19c9149d)-->
+<img src="https://github.com/user-attachments/assets/d2fb3821-4133-4a32-96c9-344c19c9149d" alt="fig20" style="width:70%;" /><br>
 ![fig21](https://github.com/user-attachments/assets/b2ec78b3-a222-48cb-9ed4-2bec7fd3ae11)
-![fig22](https://github.com/user-attachments/assets/928ebe7b-2a91-4a29-8eb2-6d1a1fca6811)
+<!--![fig22](https://github.com/user-attachments/assets/928ebe7b-2a91-4a29-8eb2-6d1a1fca6811)-->
+<img src="https://github.com/user-attachments/assets/928ebe7b-2a91-4a29-8eb2-6d1a1fca6811" alt="fig22" style="width:30%;" /><br>
 
 
