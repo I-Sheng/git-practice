@@ -212,3 +212,29 @@ curl localhost:3001
 
 #### 小結
 * -p [Host Port Number]:[Container Port Number]: 把 container port number map 到 host port number
+
+### 觀察網路的變化
+#### 在 host 觀察一下
+```bash
+ip addr
+```
+
+#### 列出目前的 docker network
+```bash
+docker network list
+docker network inspect bridge
+```
+
+#### 開啟兩個 Container 後觀察 Host 與 Containers 中的網路變化
+```bash
+docker container run -dit --name alpine1 alpine ash
+docker container run -dit --name alpine2 alpine ash
+ip addr
+
+# Enter alpine1
+docker container exec -it alpine1 ash
+# Check ip in container
+> ip addr
+# ping another container to check the connection in the network
+> ping 172.17.0.3
+```
