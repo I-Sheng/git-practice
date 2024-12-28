@@ -330,3 +330,6 @@ v22.4.0
 - 在 Host 用習慣的開發工具，例如 vscode，進行 react 開發，觀察 hot reload 是否有效
 - 用瀏覽器開啟頁面
 - 在 Host 用習慣的編輯器進行開發
+
+## Docker Compose
+Practice on [this project](https://github.com/I-Sheng/Traveling-Planner-With-LLM)
