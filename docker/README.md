@@ -249,3 +249,84 @@ docker container exec -it alpine1 ash
 <img src="https://github.com/user-attachments/assets/928ebe7b-2a91-4a29-8eb2-6d1a1fca6811" alt="fig22" style="width:30%;" /><br>
 
 
+## Docker Storage
+* 有三種類型: Bind Mounts, Volume, tmpfs
+    1. Bind Mounts: 把 host 的檔案或檔案夾掛載 (mount) 進 container 中
+    2. Volume: 由 Docker 來管理的檔案夾
+    3. tmpfs: 儲存在 host 的記憶體中
+### Bind Mounts
+`myweb/html/index.html`
+```html
+<html>
+  <head></head>
+  <body>
+   <h1> I am test </h1>
+  </body>
+</html>
+```
+```bash
+docker container run -d \
+  -p 80:80 \
+  --mount type=bind,src="$(pwd)"/myweb/html,dst=/usr/share/nginx/html \
+  nginx
+
+
+# 舊式的寫法
+docker container run -d \
+  -p 80:80 \
+  -v $(pwd)/myweb/html:/usr/share/nginx/html \
+  nginx
+```
+#### Question & Answer
+❓Q. 修改在 Host 上的檔案，會影響 container 裡的嗎？ → 會
+❓Q. 如果 container 已存在該檔案夾，也就是 dst 所指定的檔案夾在 container 裡（或者說 image 裡）已經存在了，那會發生什麼事？ →  會覆蓋掉原本的檔案夾
+
+### Docker Volume
+```bash
+docker volume ls
+
+docker volume create my-vol
+
+docker volume inspect my-vol
+
+docker run -d -it --name mount-test --mount type=volume,src=my-vol,dst=/usr/share/nginx/html,readonly nginx:alpine
+
+# 或是
+docker container run -it --rm --name vol-test -v my-vol:/app alpine
+
+> echo "I am in first container" >> /app/a.txt
+
+# 啟動第二個 container
+docker container run -it --rm --name vol-test2 -v my-vol:/app alpine
+> echo "I am in second container" >> /app/a.txt
+# 回到第一個 container 看看有沒有變化
+```
+* container2 會影響到 container1，因為在同個 volume
+
+## 綜合練習 1: 用 Docker 建立程式開發環境
+用 nodejs 22 來建立 react 的開發環境
+- 建立一個自己的 network: `my-net`
+- 用 `node:22` image 啟動一個 container
+    - bind 一個 host 上的目錄到 container 裡的 `/app`
+    - 啟動 container 時指定工作目錄 `-w /app`
+    - 啟動 container 時設定 port mapping
+        - react 啟動後的 port # 會是 5173
+    - 因為是開發時用的，希望 container 停止後就自動移除
+    - 這個 container 要啟動在我們自己建立的 network 上
+    - 啟動時的 CMD 指定為 `bash`
+- 啟動 container 後，進行以下確認與開發
+    - 驗證 nodejs 的版本
+    - 利用 vite 建立 react 專案
+    - 以開發模式啟動 react
+    ```bash
+> node -v
+v22.4.0
+> npm create vite@latest vite-react-app -- --template react
+> cd vite-react-app
+> npm i
+> npm run dev -- --host
+    ```
+- 在 Host 用瀏覽器啟動頁面 `localhost:{port}` ，這裡的 port 是啟動 container 時設定的 port
+- 在 Host 用習慣的開發工具，例如 vscode，進行 react 開發，觀察 hot reload 是否有效
+- 用瀏覽器開啟頁面
+- 在 Host 用習慣的編輯器進行開發
